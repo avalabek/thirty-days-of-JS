@@ -10,7 +10,7 @@
   
   <link href="./style.css" rel="stylesheet" type="text/css">
   
-  <script type="text/javascript" src="./drumkit.js"></script>
+  <!-- <script type="text/javascript" src="./drumkit.js"></script> -->
   <!-- link to google fonts -->
 
   <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat|Open+Sans+Condensed:300|Raleway" rel="stylesheet">
@@ -68,7 +68,29 @@
 <audio data-key="74" src="./snare.wav"></audio>
 <audio data-key="75" src="./tom.wav"></audio>
 <audio data-key="76" src="./tink.wav"></audio>
+   <script>
    
+
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+      if (!audio) return;//stops the funciton running
+      audio.currentTime = 0;//rewinds it so if you hit it again it repeats
+      audio.play();
+      key.classList.add('playing');
+    }
+
+    function removeTransition(e) {
+      // console.log(e);
+      if (e.propertyName !== 'transform') return;
+      this.classList.remove('playing');
+    }
+
+    const keys = document.querySelectorAll('.key');
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+    window.addEventListener('keydown', playSound);
+   </script>
     
     
   </body>
