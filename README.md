@@ -5,7 +5,7 @@ Remembering JavaScript without any frameworks or libraries...
 ```
 ## Day 1 - Drumkit April 27,2018
 
-![Drumkit](drumkit.jpg "Drumkit")
+![Drumkit](./drumkit/drumkit.jpg "Drumkit")
 
 * adding classes and attributes without jQuery
 * classList
