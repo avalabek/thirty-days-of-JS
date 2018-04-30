@@ -15,6 +15,11 @@
   </div>
 
 <style>
+/*   
+inset 0 0 0 3px #EFEFEF,
+inset 0 0 10px black,
+0 0 10px rgba(0,0,0,0.2); */
+
 .clock-face{
   position: relative;
   width: 100%;
@@ -26,6 +31,9 @@
 .hand {
   width: 50%;
   height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
 
 }
 </style>
@@ -36,6 +44,9 @@ function setDate() {
   const secondsDegrees = ((seconds/60)*360) + 90;
   secondHand.style.transform = `rotate(${seconndsDegrees}deg)`;
   console.log(seconds);
+
+  const mins = now.getMinutes();
+  const minsDegress = (mins/60 )
 }
 setInterval (setDate, 1000);
 </script>
