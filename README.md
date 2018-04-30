@@ -11,3 +11,12 @@ Remembering JavaScript without any frameworks or libraries...
 * classList
 * template literals
 * couldn't resist google fonts though
+
+## Day 2 - JS and CSS Clock April 30, 2018
+
+![Clock](./cssClock/clock.jpg "Clock")
+
+* changing the axis of rotation on a css element
+* template literals
+* using JavaScript Date object
+* transition-timing-function: using cubic-bezier tool
