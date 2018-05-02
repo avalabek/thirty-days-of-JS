@@ -16,7 +16,9 @@ Remembering JavaScript without any frameworks or libraries...
 
 ![Clock](./cssClock/clock.jpg "Clock")
 
+* first try using CSS grid to make sticky footer
 * changing the axis of rotation on a css element
 * template literals
 * using JavaScript Date object
 * transition-timing-function: using cubic-bezier tool
+* remember to give credit for free photos
