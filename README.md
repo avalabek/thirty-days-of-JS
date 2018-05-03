@@ -22,3 +22,14 @@ Remembering JavaScript without any frameworks or libraries...
 * using JavaScript Date object
 * transition-timing-function: using cubic-bezier tool
 * remember to give credit for free photos
+
+## Day 3 - CSS Variables and JS May 3, 2018
+
+![Picture Frame](./cssVariables/variables.png "Picture frame")
+
+* CSS variables :root
+* learning syntax and usage
+* template literals reinforcement
+* using data-type attributes
+* input type="color" will give you browsers color picker
+* CSS is so cool, I don't care what you say!
