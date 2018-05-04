@@ -2,10 +2,19 @@
   <html lang="en">
     <head>
       <meta charset="UTF-8">
-        <title>Array Cardio 💪</title>
+        <title>Map, Filter, Sort, Reduce</title>
 </head>
       <body>
-        <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+        <style>
+        body {
+          background: rgb(117, 171, 187) url("./map.jpg");
+          background-size: cover;
+        }
+        h1{
+          text-align: center;
+        }
+        </style>
+        <h1>Have a look at the JavaScript Console </h1>
         <script>
           // Get your shorts on - this is an array workout!
           // ## Array Cardio Day 1
@@ -37,12 +46,33 @@
             }
           });
           console.table(fifteen);
+          // can also be shortened to 
+          const fifteenth = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year <= 1599) 
+      // so you basically remove the if and take advantage of the implied return of arrow functions
+        );
+        console.table(fifteenth);
+
         // Array.prototype.map()
         // 2. Give us an array of the inventors' first and last names
-    
+          const names = inventors.map(inventor=>
+            inventor.first + " " + inventor.last
+          );
+          console.log(names);
+//using template literals to concatenate
+          const fullNames = inventors.map(inventor =>`${inventor.first} ${inventor.last}`);
+          console.log(fullNames);
+
         // Array.prototype.sort()
         // 3. Sort the inventors by birthdate, oldest to youngest
-    
+   //like bubble sort puts biggest one on top then compares to next, etc
+          const ordered = inventors.sort(function (a,b){
+            if (a.year > b.year){
+              return 1;
+                      }else {
+                        return -1;
+                      }            
+          
+          }); console.table(ordered);
         // Array.prototype.reduce()
         // 4. How many years did all the inventors live?
     
