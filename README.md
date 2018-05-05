@@ -34,12 +34,14 @@ Remembering JavaScript without any frameworks or libraries...
 * input type="color" will give you browsers color picker
 * CSS is so cool, I don't care what you say!
 
-## Day 4 - Array Cardio May 4, 2018
+## Day 4 - Map, Filter, Reduce and Sort array methods May 4, 2018
 
-![Array Cardio](./arrayCardio/arrayCardio.png "Array Cardio")
+![Array Cardio](./arrayCardio/arrayCardio.jpg "Array Cardio")
 
 * workout with array methods
-* reinforce map, filter, arrow functions and ternary operators
+* reinforce map, filter
+* reinforce syntax for arrow functions
+* I love ternary operators
 * learn reduce and sort
 * practice template literals
 * console.table -- who knew?

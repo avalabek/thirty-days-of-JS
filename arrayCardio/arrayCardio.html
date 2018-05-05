@@ -10,13 +10,7 @@
         body {
           background: rgb(117, 171, 187) url("./map.jpg");
           background-size: cover;
-          
-
-    /* font-family: 'Gothic A1', sans-serif; */
-
-    /* font-family: 'Dosis', sans-serif; */
-
-    font-family: 'Cormorant Unicase', serif;
+          font-family: 'Cormorant Unicase', serif;
 
 
         }
@@ -95,10 +89,13 @@
           console.log(yearsLived);
           
           //a =accumulated total c= current value
-          const totalYears = (a,c)=> a + c;
-          console.log(yearsLived.reduce(totalYears));
-  
-
+          const years = (a,c)=> a + c;
+          console.log(yearsLived.reduce(years));
+  //but it doesnt' give the same answer as wes says in video, but his answer give 861 also so maybe ok.
+          const totalYears = inventors.reduce((total, inventor)=>{
+            return total + (inventor.passed - inventor.year);
+          }, 0);
+        console.log("This is correct: ", totalYears)
         // 5. Sort the inventors by years lived
         //got it working without listing the names though
         const sortYearsLived = yearsLived.sort(function (a,b){
@@ -110,19 +107,42 @@
           }
         })
         console.table(inventors.name,sortYearsLived);
-    
+    //wes's solution
+        const oldest = inventors.sort(function(a,b){
+          const lastGuy = a.passed - a.year;
+          const nextGuy = b.passed - b.year;
+          return lastGuy > nextGuy ? -1 :1;
+        });
+        console.table(oldest);
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-    
-    
+        // have to go to above page to make this work
+        // const category = document.querySelector(".mw-category");
+        // const links = Array.from(category.querySelectorAll("a"));
+
+        // const de = links
+        //             .map(link => link.textContent)
+        //             .filter(streetName => streetName.includes("de"));
+          
         // 7. sort Exercise
         // Sort the people alphabetically by last name
-        const splitPeople = people.split(", "); 
-        console.log(splitPeople);
+        const abcPeople = people.sort((lastOne, nextOne)=>{
+        const [aLast, aFirst] = lastOne.split(", ");
+        const [bLast, bFirst] = nextOne.split(", ");
+        return aLast> bLast ? 1 : -1;
+        }); 
+        console.table(abcPeople);
         // 8. Reduce Exercise
         // Sum up the instances of each of these
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-    
+        const transport = data.reduce(function(obj, item){
+          if (!obj[item]) {
+            obj[item]=0;
+        }
+        obj[item]++;
+      return obj;
+    }, {});
+        console.log(transport);
   </script>
       </body>
 </html>
