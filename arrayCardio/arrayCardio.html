@@ -75,8 +75,26 @@
           }); console.table(ordered);
         // Array.prototype.reduce()
         // 4. How many years did all the inventors live?
-    
+        // came up with below on my own
+          const yearsLived = inventors.map(inventor=> inventor.passed - inventor.year);
+          console.log(yearsLived);
+          
+          //a =accumulated total c= current value
+          const totalYears = (a,c)=> a + c;
+          console.log(yearsLived.reduce(totalYears));
+  
+
         // 5. Sort the inventors by years lived
+        //got it working without listing the names though
+        const sortYearsLived = yearsLived.sort(function (a,b){
+          if (a>b){
+            return 1; 
+          
+          }else {
+            return -1;
+          }
+        })
+        console.table(inventors.name,sortYearsLived);
     
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -84,7 +102,8 @@
     
         // 7. sort Exercise
         // Sort the people alphabetically by last name
-    
+        const splitPeople = people.split(", "); 
+        console.log(splitPeople);
         // 8. Reduce Exercise
         // Sum up the instances of each of these
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
