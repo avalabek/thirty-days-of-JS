@@ -3,18 +3,29 @@
     <head>
       <meta charset="UTF-8">
         <title>Map, Filter, Sort, Reduce</title>
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase|Dosis|Gothic+A1" rel="stylesheet">
 </head>
       <body>
         <style>
         body {
           background: rgb(117, 171, 187) url("./map.jpg");
           background-size: cover;
+          
+
+    /* font-family: 'Gothic A1', sans-serif; */
+
+    /* font-family: 'Dosis', sans-serif; */
+
+    font-family: 'Cormorant Unicase', serif;
+
+
         }
         h1{
           text-align: center;
+          font-size:60px;
         }
         </style>
-        <h1>Have a look at the JavaScript Console </h1>
+        <h1>Have a look at the<br> JavaScript Console </h1>
         <script>
           // Get your shorts on - this is an array workout!
           // ## Array Cardio Day 1
@@ -73,7 +84,11 @@
                       }            
           
           }); console.table(ordered);
-        // Array.prototype.reduce()
+
+          //the same using ternary operator
+          const ternOrdered = inventors.sort((a,b) => a.year>b.year? 1 : -1);
+          console.table(ternOrdered);
+          // Array.prototype.reduce()
         // 4. How many years did all the inventors live?
         // came up with below on my own
           const yearsLived = inventors.map(inventor=> inventor.passed - inventor.year);

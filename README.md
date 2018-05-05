@@ -33,3 +33,13 @@ Remembering JavaScript without any frameworks or libraries...
 * using data-type attributes
 * input type="color" will give you browsers color picker
 * CSS is so cool, I don't care what you say!
+
+## Day 4 - Array Cardio May 4, 2018
+
+![Array Cardio](./arrayCardio/arrayCardio.png "Array Cardio")
+
+* workout with array methods
+* reinforce map, filter, arrow functions and ternary operators
+* learn reduce and sort
+* practice template literals
+* console.table -- who knew?
