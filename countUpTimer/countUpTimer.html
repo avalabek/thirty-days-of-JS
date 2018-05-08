@@ -29,9 +29,14 @@
           document.getElementById("seconds").innerHTML = pad(++sec % 60);
           document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
         }, 1000);
+
+//   var timer = setInterval(function () {...}, 1000 );
+// ...
+//   clearInterval(timer);
+
         function stopTimer(e) {
             console.log(e);
-            //  this.classList.remove("playing");
+            clearInterval();
           }
           const button = document.querySelectorAll(".button");
           button.forEach(button => button.addEventListener("stop", stopTimer));
