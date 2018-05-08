@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Count Seconds Timer</title>
+  </head>
+  
+  <body>
+    <div id="seconds">
+
+    </div>
+    
+    <button>Start</button>
+    <button>Stop</button>
+    <button>Reset</button>
+    <style>
+      #seconds {
+        border: 3px solid;
+        height: 35px;
+      }
+    </style>
+    <script>
+      var sec = 0;
+        function pad(val) {
+          return val > 9 ? val : "0" + val;
+        }
+        setInterval(function () {
+          document.getElementById("seconds").innerHTML = pad(++sec % 60);
+          document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
+        }, 1000);
+        function stopTimer(e) {
+            console.log(e);
+            //  this.classList.remove("playing");
+          }
+          const button = document.querySelectorAll(".button");
+          button.forEach(button => button.addEventListener("stop", stopTimer));
+
+          window.addEventListener("click", stopTimer);
+    </script>
+</body>
+</html>
+
