@@ -12,7 +12,7 @@
     </div>
     
     <button>Start</button>
-    <button>Stop</button>
+    <button id="stop">Stop</button>
     <button>Reset</button>
     <style>
       #seconds {
@@ -25,7 +25,7 @@
         function pad(val) {
           return val > 9 ? val : "0" + val;
         }
-        setInterval(function () {
+        var timer= setInterval(function () {
           document.getElementById("seconds").innerHTML = pad(++sec % 60);
           document.getElementById("minutes").innerHTML = pad(parseInt(sec / 60, 10));
         }, 1000);
@@ -36,12 +36,17 @@
 
         function stopTimer(e) {
             console.log(e);
-            clearInterval();
+            clearInterval(timer);
           }
-          const button = document.querySelectorAll(".button");
-          button.forEach(button => button.addEventListener("stop", stopTimer));
+          const stop = document.querySelectorAll("#stop");
+          stop.forEach(stop => stop.addEventListener("click", stopTimer));
 
-          window.addEventListener("click", stopTimer);
+          // window.addEventListener("click", stopTimer);
+
+  // document.getElementById('stop').addEventListener('click', function () {
+  //   console.log("You finally clicked stop");
+  // });
+
     </script>
 </body>
 </html>
