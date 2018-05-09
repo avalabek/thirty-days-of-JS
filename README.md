@@ -45,3 +45,11 @@ Remembering JavaScript without any frameworks or libraries...
 * learn reduce and sort
 * practice template literals
 * console.table -- who knew?
+
+## Day 5 - Flex Panel fun with CSS May 9, 2018
+
+![Array Cardio](./flexPanel/dog.jpg "FlexPanel")
+
+* using transitions to animiate in CSS
+* translateY to move things
+* CSS syntax >* for example
