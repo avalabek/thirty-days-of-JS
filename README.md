@@ -48,8 +48,8 @@ Remembering JavaScript without any frameworks or libraries...
 
 ## Day 5 - Flex Panel fun with CSS May 9, 2018
 
-![Array Cardio](./flexPanel/dog.jpg "FlexPanel")
-
+![Flex panels](https://user-images.githubusercontent.com/31053210/39838802-392f6bfa-538f-11e8-94d2-c078790587b1.gif)
 * using transitions to animiate in CSS
 * translateY to move things
 * CSS syntax >* for example
+* this is so much cooler than sliders and just CSS
