@@ -52,7 +52,7 @@ Remembering JavaScript without any frameworks or libraries...
 * using transitions to animiate in CSS
 * translateY to move things
 * CSS syntax >* for example
-* this is so much cooler than sliders and just CSS
+* this is so much cooler than sliders and just it's just CSS!
 * conversion to gif made dog's white background pixelated in demo
 
 ## Day 6 - Type Ahead: Search and highlight cities using fetch() May 10, 2018
