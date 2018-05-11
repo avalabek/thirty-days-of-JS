@@ -64,3 +64,13 @@ Remembering JavaScript without any frameworks or libraries...
 * promises (fetch returns a promise)
 * reinforce map and filter
 * practice template literals
+
+## Day 7 - Array Cardio .some .every .find .findIndex May 11, 2018
+
+![Array Cardio 2](./arrayCardio2/screenshot.png "Array Cardio 2")
+
+* learn about .some .every .find .findIndex array methods
+* more reinforcement of arrow function syntax
+* It doesn't need a front end but I like pretty pictures.
+* taking advantage of implicit return in arrow functions
+* using the spread operator outside of React
