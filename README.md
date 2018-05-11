@@ -36,7 +36,7 @@ Remembering JavaScript without any frameworks or libraries...
 
 ## Day 4 - Map, Filter, Reduce and Sort array methods May 4, 2018
 
-![Array Cardio](./arrayCardio/arrayCardio.jpg "Array Cardio")
+![Array Cardio](./arrayCardio/Picture2.png "Array Cardio")
 
 * workout with array methods
 * reinforce map, filter
