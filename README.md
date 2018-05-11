@@ -54,3 +54,13 @@ Remembering JavaScript without any frameworks or libraries...
 * CSS syntax >* for example
 * this is so much cooler than sliders and just CSS
 * conversion to gif made dog's white background pixelated in demo
+
+## Day 6 - Type Ahead: Search and highlight cities using fetch() May 10, 2018
+
+![Type Ahead](./ajaxTypeAhead/typeAhead.png "Type Ahead")
+
+* learn about new fetch() API to get resources to browser
+* learn a little about how to use regular expressions
+* promises (fetch returns a promise)
+* reinforce map and filter
+* practice template literals
