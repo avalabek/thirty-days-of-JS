@@ -43,6 +43,10 @@
       
     });
   }
+  function numberWithCommas(x) {
+    //this is regex to insert comma in numbers!?#
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
   function displayMatches(){
     const matchArray = findMatches(this.value, cities);
     // console.log(matchArray);
