@@ -53,3 +53,4 @@ Remembering JavaScript without any frameworks or libraries...
 * translateY to move things
 * CSS syntax >* for example
 * this is so much cooler than sliders and just CSS
+* conversion to gif made dog's white background pixelated in demo
