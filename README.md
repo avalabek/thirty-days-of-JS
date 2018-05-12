@@ -74,3 +74,13 @@ Remembering JavaScript without any frameworks or libraries...
 * It doesn't need a front end but I like pretty pictures.
 * taking advantage of implicit return in arrow functions
 * using the spread operator outside of React
+
+## Day 8 - HTML Canvas May 11, 2018
+
+![HTML Canvas](./htmlCanvas/htmlCanvas.png "HTML Canvas")
+
+* first time using HTML canvas
+* using hue to create rainbow gradient
+* adjusting the width of the pen to go up and down through a range
+* two mini projects in one day!
+* learn command to preview markdown files in VSCode
