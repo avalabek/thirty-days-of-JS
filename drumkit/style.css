@@ -4,6 +4,7 @@
 
 body {
    background-image: url("./jungle.jpg");
+   /* the line below makes background image responsive */
    background-size: cover;
 }
 .keys {
