@@ -84,3 +84,13 @@ Remembering JavaScript without any frameworks or libraries...
 * adjusting the width of the pen to go up and down through a range
 * two mini projects in one day!
 * learn command to preview markdown files in VSCode
+
+## Day 9 - Dev Tools May 17, 2018
+![Dev Tools](./devTools/devtools.png "Dev Tools")
+
+* learn about console.warn .error .info .assert .log(element) .dir(element) .group .count .time
+* who knew what the console could do!
+* using the new fetch() API some more
+* more template literal practice--I get it now!
+* you can use @import within style tags to import css like links to google fonts
+* svgbackgrounds.com has really cool backgrounds!
