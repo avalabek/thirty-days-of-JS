@@ -94,3 +94,14 @@ Remembering JavaScript without any frameworks or libraries...
 * more template literal practice--I get it now!
 * you can use @import within style tags to import css like links to google fonts
 * svgbackgrounds.com has really cool backgrounds!
+
+## Day 10 - Checkboxes tick multiple hold shift May 17, 2018
+![Checkboxes](./checkboxes/checkboxes.png "Checkboxes")
+
+* make checkboxes select all those between shift-tick
+* inbetween = !inbetween
+* using @import again 
+* customize svgbackground colors
+* use console.log to check along the way
+* remember to stop and check after each step
+* I understand the explanation of this one but was tough going on my own(didn't get there)
