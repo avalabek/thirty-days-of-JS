@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+
+<body>
+<style>
+  /* just learned about this way to import styles; will try */
+@import url('https://fonts.googleapis.com/css?family=Kavivanar|Lobster|Pacifico');
+
+  body{
+  background-color: #00bfc5;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 900'%3E%3Cpath fill='%23A0E2DB' d='M0 504 0 899 1600 899 1600 120z'/%3E%3Cpath fill='%23CBF2F3' d='M1600 567 1600 899 0 899 0 165z'/%3E%3Cpath fill='%23719D71' d='M0 680 0 899 1600 899 1600 300z'/%3E%3Cpath fill='%237EB67E' d='M1600 719 1600 899 0 899 0 353z'/%3E%3Cpath fill='%23004D66' d='M0 788 0 899 1600 899 1600 625z'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+}
+h1{
+  text-align: center;
+  font-size: 60px;
+  font-family: "Lobster", cursive;
+}
+h2{
+  text-align: center;
+  font-family: "Pacifico", cursive;
+}
+p{
+  text-align:center;
+  font-size: 30px;
+  color: white;
+  font-family: "Kavivanar", cursive;
+}
+</style>
+<h1>Love this background from SVG Backgrounds.com</h1>
+<h2>And I can't resist Google fonts!</h2>
+  <p onClick="makeGreen()">Fun with the console! Click me.</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log("this is a console.log")
+
+    // Interpolated
+    var ghost = "I am a string that is ";
+    console.log ("hello I am a %s string!", "string")
+    console.log(`${ghost} better with backticks` )
+    // Styled
+    console.log("%c I am some great big text", "font-size:50px");
+    // warning!
+    console.warn("Oh NO! will give stack trace too");
+
+    // Error :|
+    console.error("Shoot! also will give you stack trace");
+
+    // Info
+    console.info("Crocodiles eat 3 people per year");
+    // Testing
+    console.assert(1===2, "That is wrong!");
+    //asert will say nothing if what you assert is true for eg:
+    console.assert(1===1, "that is wrong!");
+    
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), "p element does not contain ouch!");
+    // clearing
+    // this clears the console of everything
+    // console.clear();
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+
+    // Grouping together
+    dogs.forEach(dog => {
+      //put console.group along with what you want to group it by then use console.groupEnd
+      console.group(`${dog.name}`);
+      // console.groupCollapsed(`${dog.name}`); use this to keep groups collapsed
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age}`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old.`);
+      console.groupEnd(`${dog.name}`);
+    });
+    // counting
+    console.count('wes');
+    console.count('steve');
+    console.count('wes');
+    console.count('wes');
+    console.count('steve');
+    console.count('wes');
+  console.count('steve');
+   console.count('steve');
+    // timing
+    console.time('fetching data');
+    fetch("https://api.github.com/users/avalabek")
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+  </script>
+</body>
+
+</html>
