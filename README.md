@@ -106,7 +106,7 @@ Remembering JavaScript without any frameworks or libraries...
 * remember to stop and check after each step
 * I understand the explanation of this one but was tough going on my own(didn't get there)
 
-## Day 101 - Custom video player May 25, 2018
+## Day 11 - Custom video player May 25, 2018
 ![Custom video player](./customVideo/Picture1.png "Custom video")
 
 * passive learning on this one
