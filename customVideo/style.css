@@ -99,7 +99,7 @@ body {
 
 .progress__filled {
   width:50%;
-  background:#ffc600;
+  background:#0ab52a;
   flex:0;
   flex-basis:50%;
 }
@@ -128,14 +128,14 @@ input[type=range]::-webkit-slider-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ffc600;
+  background: #0ab52a;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -3.5px;
   box-shadow:0 0 2px rgba(0,0,0,0.2);
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #bada55;
+  background: #0ab52a;
 }
 input[type=range]::-moz-range-track {
   width: 100%;
@@ -151,6 +151,6 @@ input[type=range]::-moz-range-thumb {
   height: 15px;
   width: 15px;
   border-radius: 50px;
-  background: #ffc600;
+  background: #0ab52a;
   cursor: pointer;
 }
