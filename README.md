@@ -105,3 +105,13 @@ Remembering JavaScript without any frameworks or libraries...
 * use console.log to check along the way
 * remember to stop and check after each step
 * I understand the explanation of this one but was tough going on my own(didn't get there)
+
+## Day 101 - Custom video player May 25, 2018
+![Custom video player](./customVideo/Picture1.png "Custom video")
+
+* passive learning on this one
+* learned how to make a css gradient background
+* practice using querySelector s
+* using lots of events
+* more template literals
+* can simply cut and paste icons into file to use
