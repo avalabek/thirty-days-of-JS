@@ -1,0 +1,51 @@
+<!DOCTYPE html >
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript sandbox</title>
+
+</head>
+
+<body style="background-color: lightcoral">
+  <script>
+
+    function adjacentElementsProduct(inputArray) {
+        var inputArray = [3, 6, -2, -5, 7, 3]
+        //ideas: need to go through and multiply each element in the array by it's neighbor
+        // so maybe find the biggest pos integers and see if they are side by side
+      // or maybe there is an array method that compares x, y elements of an array
+     
+     //so this below works but it multiplies each number by itself
+    //  var sumArray = inputArray.map(input => input * input)
+    //    console.log(sumArray);
+    //  } 
+    //this works and console.logs the numbers you want. now get them in an array and then compare each number side by side
+        var arraySum = [];
+      for (var i=0; i<inputArray.length; i++){
+        var newArray = (inputArray[i] * inputArray[i + 1])
+        console.log("newArray: ", newArray)
+        //this pushes them into an array each. So each individual number is in its own array
+        
+        arraySum.push(inputArray[i]* inputArray[i+1])
+        
+        }
+        arraySum.pop()
+        console.log("arraySum no NAN? ", arraySum);
+        //ok now I have pushed the results into the array. so what if I splice the array and then compare to find greatest
+         console.log(arraySum);
+         var largestProduct = Math.max(...arraySum)
+         console.log("Math.max ", Math.max(...arraySum))
+
+    }
+      
+      adjacentElementsProduct();
+  
+
+
+
+
+    
+  </script>
+  </body>
+  </html>
