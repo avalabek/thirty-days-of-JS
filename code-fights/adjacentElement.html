@@ -22,26 +22,29 @@
     //  } 
     //this works and console.logs the numbers you want. now get them in an array and then compare each number side by side
         var arraySum = [];
-      for (var i=0; i<inputArray.length; i++){
-        var newArray = (inputArray[i] * inputArray[i + 1])
-        console.log("newArray: ", newArray)
+          for (let i=0; i<inputArray.length-1; i++){
+            var newArray = (inputArray[i] * inputArray[i + 1]);
+            console.log("newArray: ", newArray)
         //this pushes them into an array each. So each individual number is in its own array
         
-        arraySum.push(inputArray[i]* inputArray[i+1])
+            arraySum.push(newArray);
         
         }
-        arraySum.pop()
-        console.log("arraySum no NAN? ", arraySum);
+        // return arraySum;
+        // arraySum.pop()
+        // console.log("arraySum no NAN? ", arraySum);
         //ok now I have pushed the results into the array. so what if I splice the array and then compare to find greatest
          console.log(arraySum);
+         
          var largestProduct = Math.max(...arraySum)
-         console.log("Math.max ", Math.max(...arraySum))
-
+         console.log("Math.max ", largestProduct);
+         return largestProduct;
+//now the return is working, it returns the number
     }
       
       adjacentElementsProduct();
   
-
+//Right so this works, all tests pass but as console logs. now I need to get it to return something. Really my knowledge of how to use a areturn is weak
 
 
 
