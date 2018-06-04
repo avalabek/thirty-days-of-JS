@@ -84,6 +84,7 @@ Remembering JavaScript without any frameworks or libraries...
 * adjusting the width of the pen to go up and down through a range
 * two mini projects in one day!
 * learn command to preview markdown files in VSCode
+* ctrl shift v in vscode to preview markdown files
 
 ## Day 9 - Dev Tools May 17, 2018
 ![Dev Tools](./devTools/devtools.png "Dev Tools")
@@ -111,7 +112,17 @@ Remembering JavaScript without any frameworks or libraries...
 
 * passive learning on this one
 * learned how to make a css gradient background
-* practice using querySelector s
+* practice using querySelectors
 * using lots of events
 * more template literals
 * can simply cut and paste icons into file to use
+
+## Day 12 - Key Dectector June 4, 2018
+![Key Detector](./keyDetector/keyDetector.png "Key Detector")
+
+* lemon chiffon is a real named css color
+* cornify.js adds unicorns and rainbows (who makes this stuff?)
+* it is really easy to make a key logger...hmm
+* .join makes a string **reinforce this to self***
+* -array.length -1 is a thing you can do to start from back of array
+* you can learn things from 5 minutes of coding 
