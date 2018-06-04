@@ -1,4 +1,20 @@
 
+h1{
+  font-family: 'Raleway Dots', cursive;
+  font-size: 50px;
+  
+}
+ #hello { 
+   margin-left: 40px;
+   margin-top:40px;
+   font-family: 'Raleway Dots', cursive;
+  font-size: 80px;
+   position:absolute; 
+   top: 0; 
+   left:0; 
+   color:  indigo;
+   z-index: 9999; 
+  }
 
 @for $i from 1 through 30 {
   @keyframes particle-animation-#{$i}{
