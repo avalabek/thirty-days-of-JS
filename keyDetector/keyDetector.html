@@ -7,8 +7,25 @@
   <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
 </head>
 
-<body>
+<body style="background-color:lemonchiffon;">
   <script>
+    const pressed =[];
+    const secretCode ="andreya";
+
+    window.addEventListener('keyup', (e) =>{
+      console.log(e.key);
+      //now we know we will only need the number of letters
+      // in the secret code need to start from end
+      //which is why negative so it will start from the back
+      pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
+      pressed.push(e.key);
+      //push the pressed key into the empty array
+      //is it really that easy to log key strokes???
+      console.log(pressed);
+      //will tell us which key was pressed
+      
+    });
+
   </script>
 </body>
 
