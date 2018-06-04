@@ -19,6 +19,13 @@
       //which is why negative so it will start from the back
       pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
       pressed.push(e.key);
+      //remember.join makes it into a string ****important
+      if (pressed.join('').includes(secretCode)){
+        console.log('You did it!')
+        cornify_add();
+        //adds silly stuff to screen
+
+      }
       //push the pressed key into the empty array
       //is it really that easy to log key strokes???
       console.log(pressed);
