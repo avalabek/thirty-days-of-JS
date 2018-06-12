@@ -12,7 +12,7 @@
 
     <h1>Slide in on Scroll</h1>
 
-    <p>Consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur pariaturlores sunt esse magni, ut, dignissimos.</p>
+    <p>So here is a page demonstrating how the images can slide in and out on scroll. This is similar to an effect I am trying to create on my new portfolio page. So we had to do some subtraction and additon to find the halfway points and bottom points we wanted the images to scroll in and out on. Wes is correct; the effect is a little jarring. Also I learned about debounce functions in order to make sure the animations are not too jerky etc. Basically, you can copy paste the function and then wrap it around what you want to debounce.</p>
     <p>Lorem ipsum cupiditate, corporis a qui libero ipsum delectus quidem dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut, dignissimos.</p>
     <p>Adipisicing elit. Tempore tempora rerum..</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora rerum, est autem cupiditate, corporis a qui libero ipsum delectus quidem dolor at nulla, adipisci veniam in reiciendis aut asperiores omnis blanditiis quod quas laborum nam! Fuga ad tempora in aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut, dignissimos.</p>
@@ -60,6 +60,24 @@
       };
     }
 
+const sliderImages =  document.querySelectorAll('.slide-in');
+function checkSlide(e){
+  
+  sliderImages.forEach(sliderImage => {
+//half way through image
+    const slideInAt =  (window.scrollY + window.innerHeight) - sliderImage.height/2;
+   //bottom of image
+    const imageBottom = sliderImage.offsetTop + sliderImage.height;
+    const isHalfShown = slideInAt> sliderImage.offsetTop;
+    const isNotScrolledPast = window.scrollY < imageBottom;
+    if (isHalfShown && isNotScrolledPast){
+      sliderImage.classList.add('active');
+    }else {
+      sliderImage.classList.remove('active');
+    }
+  });
+}
+window.addEventListener('scroll', debounce(checkSlide));
   </script>
 
   <style>
