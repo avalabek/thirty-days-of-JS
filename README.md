@@ -126,3 +126,13 @@ Remembering JavaScript without any frameworks or libraries...
 * .join makes a string **reinforce this to self***
 * -array.length -1 is a thing you can do to start from back of array
 * you can learn things from 5 minutes of coding 
+
+## Day 13 - Slide On Scroll June 12, 2018
+![Slide on Scroll](./slideOnScroll/slideOnScroll.png "Slide on Scroll")
+
+* debounce function: use it for smoothness
+* scrollY is not the same as scrolly 
+* use math to find the point in the middle and the end for images to slide in
+* to much animation is not such great UX
+* this is a long 30 days!!
+ 
