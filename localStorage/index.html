@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-image: url('./tapas.jpg');background-size: cover;">
+<body >
   <!--
       Fish SVG Cred:
       https://thenounproject.com/search/?q=fish&i=589236
@@ -48,7 +48,16 @@
     const items = [];
     
     function addItem(e){
-      console.log('Hello');
+      //prevents reloading below
+      e.preventDefault();
+      const text = (this.querySelector('[name=item]')).value; 
+      const item = {
+        text: text,
+        //or in ES6 can just write text, if the names are same above
+        done: false
+      };
+      console.log(item);
+      
     }
 
     addItems.addEventListener('submit', addItem);
