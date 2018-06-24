@@ -136,3 +136,25 @@ Remembering JavaScript without any frameworks or libraries...
 * to much animation is not such great UX
 * this is a long 30 days!!
  
+ ## Day 14 - Refs vs Copy June 12, 2018
+
+* a reference to an array modifies the original array
+* several ways to make a copy:
+```
+given the array:
+
+const players = [Annie, Sue, Bob]
+
+you can copy it the following ways
+
+const team2 = players.slice()
+OR
+const team3 = [].concat(players);
+OR
+const team4 = [...players];
+OR
+const team5 = Array.from(players);
+
+```
+* also ways to work around more than one level of cloneing for objects, ie "poor man's deep clone"
+* No UI today, all in the console.
