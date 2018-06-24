@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="background-image: url('./tapas.jpg');background-size: cover;">
   <!--
       Fish SVG Cred:
       https://thenounproject.com/search/?q=fish&i=589236
@@ -46,6 +46,12 @@
     const addItems = document.querySelector('.add-items');
     const itemsList = document.querySelector('.plates');
     const items = [];
+    
+    function addItem(e){
+      console.log('Hello');
+    }
+
+    addItems.addEventListener('submit', addItem);
 
   </script>
 
