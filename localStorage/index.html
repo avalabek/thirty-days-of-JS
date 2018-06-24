@@ -56,8 +56,26 @@
         //or in ES6 can just write text, if the names are same above
         done: false
       };
-      console.log(item);
+      items.push(item);
+      populateList(items, itemsList);
+      console.table(items);
+      //this here refers to form element
+      //form element has a reset() method
+      this.reset();
       
+    }
+    // set the plates to an empty array so that if
+    // nothing is added it still works
+    function populateList(plates = [],platesList){
+      platesList.innerHTML= plates.map((plate, i) => {
+        return `
+          <li>
+            <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : null} />
+            <label for ="item${i}">${plate.text}</label>
+          </li>
+        `;
+      }).join('');
+      //takes array and makes a big string
     }
 
     addItems.addEventListener('submit', addItem);
