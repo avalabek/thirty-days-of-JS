@@ -58,7 +58,9 @@
       };
       items.push(item);
       populateList(items, itemsList);
-      console.table(items);
+      localStorage.setItem('items', items);
+
+      // console.table(items);
       //this here refers to form element
       //form element has a reset() method
       this.reset();
@@ -70,7 +72,7 @@
       platesList.innerHTML= plates.map((plate, i) => {
         return `
           <li>
-            <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : null} />
+            <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
             <label for ="item${i}">${plate.text}</label>
           </li>
         `;
