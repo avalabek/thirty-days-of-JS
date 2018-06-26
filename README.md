@@ -158,3 +158,11 @@ const team5 = Array.from(players);
 ```
 * also ways to work around more than one level of cloneing for objects, ie "poor man's deep clone"
 * No UI today, all in the console.
+
+## Day 15 - Slide On Scroll June 25, 2018
+![Local Storage](./localStorage/localStorage.png "Local Storage")
+
+* template literals 
+* using local storage for data to persist
+* not crazy about the svg fish
+* the form element has a reset() method
