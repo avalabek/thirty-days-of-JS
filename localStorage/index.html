@@ -39,12 +39,16 @@
     <form class="add-items">
       <input type="text" name="item" placeholder="Item Name" required>
       <input type="submit" value="+ Add Item">
+      
     </form>
+    <input class="delete-items" type="submit" value="-Delete Item">
+    <input class="clear-form" type="submit" value="Clear Form">
   </div>
 
   <script>
     const addItems = document.querySelector('.add-items');
     const itemsList = document.querySelector('.plates');
+    const deleteItems = document.querySelector('.delete-items');
     const items = JSON.parse(localStorage.getItem('items')) || [];
     // so above will check local storage then if not will fall back on empty array
     function addItem(e){

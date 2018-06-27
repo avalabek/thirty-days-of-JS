@@ -80,3 +80,23 @@
       border:1px solid rgba(0,0,0,0.1);
       font-family: 'Cinzel', serif;
     }
+.delete-items {
+      margin-top: 20px;
+    }
+
+    .delete-items  {
+      padding:10px;
+      outline:0;
+      border:1px solid rgba(0,0,0,0.1);
+      font-family: 'Cinzel', serif;
+    }
+.clear-form {
+      margin-top: 20px;
+    }
+
+    .clear-form  {
+      padding:10px;
+      outline:0;
+      border:1px solid rgba(0,0,0,0.1);
+      font-family: 'Cinzel', serif;
+    }
