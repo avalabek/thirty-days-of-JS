@@ -79,11 +79,28 @@
           </li>
         `;
       }).join('');
+      //so this is event delegation, where we listen for something on something higher(parent) and then check to see if it is hte actual thing we want with and if 
+//HEY plates, when someone clicks on you, can you pass the 
+//click on to your li children, because you are the only one listening, we need you plates(parent) to pass click along
+      
       //takes array and makes a big string
     }
+  function toggleDone(e) {
+    if(!e.target.matches('input'))return;
+    //so skips this unless its and input
+    //.matches is a new api in browser like jquery's is input
+    const el = e.target;
+    const index = el.dataset.index;
+    // take it and then set it to it's opposite, so if false,s et to true, etc
+    items[index].done =!items[index].done;
+    //change property, store in local storage, visually update on page
+    localStorage.setItem('items', JSON.stringify(items));
+    // console.log(el.dataset.index);
+    // this is why we put a data.index on each chcekbox so we can find ti 
 
+  }
     addItems.addEventListener('submit', addItem);
-
+    itemsList.addEventListener('click', toggleDone);
     populateList(items, itemsList);
   </script>
 

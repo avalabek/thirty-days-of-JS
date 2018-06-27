@@ -166,3 +166,4 @@ const team5 = Array.from(players);
 * using local storage for data to persist
 * not crazy about the svg fish
 * the form element has a reset() method
+* add an item into local storage, update local storage everytime, on page load we check if there is something in local storage, and if not it falls back to local storage
