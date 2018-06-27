@@ -45,8 +45,8 @@
   <script>
     const addItems = document.querySelector('.add-items');
     const itemsList = document.querySelector('.plates');
-    const items = [];
-    
+    const items = JSON.parse(localStorage.getItem('items')) || [];
+    // so above will check local storage then if not will fall back on empty array
     function addItem(e){
       //prevents reloading below
       e.preventDefault();
@@ -58,7 +58,9 @@
       };
       items.push(item);
       populateList(items, itemsList);
-      localStorage.setItem('items', items);
+      localStorage.setItem('items', JSON.stringify(items));
+      //local storage only in string so needs to be stringified
+      //parse converts the other way from string to object
 
       // console.table(items);
       //this here refers to form element
