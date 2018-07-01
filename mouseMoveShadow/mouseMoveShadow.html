@@ -9,7 +9,7 @@
 <body>
 
   <div class="hero">
-    <h1 contenteditable>🔥Fun with text shadows!</h1>
+    <h1 contenteditable>🌺Fun with text shadows!</h1>
   </div>
 
   <style>
@@ -37,7 +37,7 @@
 /* text-shadow: horizontal-offset vertical-offset blur color; */
 
 /* text-shadow: 2px 4px 3px rgba(0,0,0,0.3); */
-	
+	 /* text-shadow: 10px 10px 0 rgba(0,0,0,1); */
 text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
       /* text-shadow: 10px 10px 0 rgba(0, 0, 0, 1); */
       font-size: 100px;
@@ -73,8 +73,9 @@ text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 
       text.style.textShadow = `
         ${xWalk}px ${yWalk}px 0 cadetBlue,
-        ${xWalk * -1}px ${yWalk}px 0 cornflowerBlue
-
+        ${xWalk * -1}px ${yWalk}px 0 cornflowerBlue,
+        ${yWalk}px ${xWalk * -1}px 0 plum,
+        ${yWalk * -1}px ${xWalk}px 0 powderBlue
         
         `;
     }
