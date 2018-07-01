@@ -49,6 +49,8 @@
     const addItems = document.querySelector('.add-items');
     const itemsList = document.querySelector('.plates');
     const deleteItems = document.querySelector('.delete-items');
+    const clearItems = document.querySelector('.clear-items');
+
     const items = JSON.parse(localStorage.getItem('items')) || [];
     // so above will check local storage then if not will fall back on empty array
     function addItem(e){
@@ -72,6 +74,11 @@
       this.reset();
       
     }
+    function deleteItem(e) {
+        localStorage.clear()
+        localStorage.setItem('items', JSON.stringify(items));
+        populateList([], itemsList)
+      }
     // set the plates to an empty array so that if
     // nothing is added it still works
     function populateList(plates = [],platesList){
@@ -89,6 +96,7 @@
       
       //takes array and makes a big string
     }
+    
   function toggleDone(e) {
     if(!e.target.matches('input'))return;
     //so skips this unless its and input
@@ -106,6 +114,7 @@
     addItems.addEventListener('submit', addItem);
     itemsList.addEventListener('click', toggleDone);
     populateList(items, itemsList);
+    deleteItems.addEventListener('click',deleteItem);
   </script>
 
 
