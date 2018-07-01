@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Shadow</title>
+</head>
+
+<body>
+
+  <div class="hero">
+    <h1 contenteditable>🔥Fun with text shadows!</h1>
+  </div>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Shrikhand');
+    html {
+      color: black;
+     font-family: 'Shrikhand', cursive;
+    }
+
+    body {
+      margin: 0;
+      background-color: blanchedAlmond;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    h1 {
+      
+/* text-shadow: horizontal-offset vertical-offset blur color; */
+
+/* text-shadow: 2px 4px 3px rgba(0,0,0,0.3); */
+	
+text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+      /* text-shadow: 10px 10px 0 rgba(0, 0, 0, 1); */
+      font-size: 100px;
+    }
+  </style>
+
+
+  <script>
+    const hero = document.querySelector('.hero');
+    const text = hero.querySelector('h1');
+    const walk = 100;
+
+    function shadow(e){
+      // const width = hero.offsetWidth;
+      // const height = hero.offsetHeight;
+      //the above is the same as the below line; the below line is ES6 destructuring
+      const { offsetWidth: width, offsetHeight: height} = hero;
+      let { offsetX: x, offsetY: y } = e;
+
+      // console.log(x, y);
+      //right now if you hover over the hero thing it resets to zero so you need
+      //to tell it to keep the coordinates continuous
+
+      // console.log(this)//hero div
+      if (this !==  e.target){
+        x = x + e.target.offsetLeft;
+        y = y + e.target.offsetTop;
+      }
+// so we set walk to 100 which means that 50 is as high as we go and 
+// -50 will be the lower limit. the math in const xWalk
+      const xWalk = (x/width * walk) - (walk/2);
+      const yWalk = (y/height * walk) - (walk/2);
+
+      text.style.textShadow = `
+        ${xWalk}px ${yWalk}px 0 cadetBlue,
+        ${xWalk * -1}px ${yWalk}px 0 cornflowerBlue
+
+        
+        `;
+    }
+    hero.addEventListener('mousemove', shadow);
+  </script>
+</body>
+
+</html>
