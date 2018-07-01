@@ -167,3 +167,12 @@ const team5 = Array.from(players);
 * not crazy about the svg fish
 * the form element has a reset() method
 * add an item into local storage, update local storage everytime, on page load we check if there is something in local storage, and if not it falls back to local storage
+
+## Day 16 - Mouse Move Shadow July 9, 2018
+![Mouse Move Shadow](https://user-images.githubusercontent.com/31053210/42138365-4e2681f8-7d31-11e8-9d95-0b545ba531c8.gif)
+
+* template literals 
+* ES6 destructuring practice
+* still learning cool named colors in CSS
+* x and y and math together when there are nested elements
+* text-shadows in CSS will shadow whatever font you like
